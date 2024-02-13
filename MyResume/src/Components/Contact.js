@@ -69,7 +69,7 @@ function Contact() {
               <a href="#" className="fab fa-facebook-f"></a>
               <a href="#" className="fab fa-twitter"></a>
               <a
-                href="https://github.com/chavanRk/MyProjects"
+                href="https://github.com/chavanRk"
                 target="_blank"
                 className="fab fa-github"
               ></a>
@@ -83,24 +83,24 @@ function Contact() {
 
           <form action="">
             <div className="inputBox">
-              <input type="text" placeholder="your name" />
-              <input type="number" placeholder="your number" />
+              <input type="text" placeholder="Your Name" />
+              <input type="number" placeholder="Your Number" />
             </div>
 
             <div className="inputBox">
-              <input type="email" placeholder="your email" />
-              <input type="text" placeholder="your subject" />
+              <input type="email" placeholder="Your Email" />
+              <input type="text" placeholder="Your Subject" />
             </div>
 
             <textarea
               name=""
-              placeholder="your message"
+              placeholder="Your message"
               id=""
               cols="30"
               rows="10"
             ></textarea>
 
-            <input type="submit" value="send message" class="btn" />
+            <input type="Submit" value="send message" class="btn" />
           </form>
         </div>
       </section>

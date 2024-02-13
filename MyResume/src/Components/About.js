@@ -64,7 +64,7 @@ function About() {
                 </h3>
                 <h3>
                   {" "}
-                  <span>Experience : </span> 4 Months{" "}
+                  <span>Experience : </span> 6 Months{" "}
                 </h3>
                 <h3>
                   {" "}
@@ -85,7 +85,7 @@ function About() {
 
           <div className="count-container">
             <div className="box">
-              <h3>4</h3>
+              <h3>6</h3>
               <p>Months of experience</p>
             </div>
 
@@ -119,6 +119,10 @@ function About() {
           <div className="box">
             <img src="images/icon-6.png" alt=""/>
             <h3>react.js</h3>
+          </div>
+          <div className="box">
+            <img src="images/react-native.png" alt=""/>
+            <h3>react native</h3>
           </div>
           <div className="box">
             <img src="images/icon-7.png" alt=""/>
@@ -185,9 +189,15 @@ function About() {
           </div>
           <div className="box">
             <i className="fas fa-graduation-cap"></i>
-            <span>Oct-2022 - Current</span>
+            <span>Oct-2022 - May-2023</span>
             <h3>Associate Software Engineer Intern</h3>
             <p>Refactor Academy, Bengaluru</p>
+          </div>
+          <div className="box">
+            <i className="fas fa-graduation-cap"></i>
+            <span>May 2023 - Current</span>
+            <h3>Full Stack Developer</h3>
+            <p>Advance Digital Solutions, Vasai, Mumbai</p>
           </div>
         </div>
       </section>

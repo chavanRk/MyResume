@@ -11,6 +11,20 @@ function Portfolio() {
 
         <div class="box-container">
           <div class="box">
+            <img src="/Images/YORE-care.png" alt="" />
+            <div class="content">
+              <h3>Work Experience</h3>
+              <p>YORE Care App</p>
+              <a
+                target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.yorecareapp&pli=1"
+              >
+                OPEN
+              </a>
+            </div>
+          </div>
+
+          <div class="box">
             <img src="/Images/scr1.jpg" alt="" />
             <div class="content">
               <h3>project 01</h3>
