@@ -42,8 +42,8 @@ function Home_Component() {
           <h3>hi, i am Rohitkumar Chavan</h3>
           <span>Full-Stack developer</span>
           <p>
-            I'm a Full Stack Web Developer from Pune, India. I have a passion
-            for design and love for Web Developement.
+            I'm a Full Stack Developer from Pune, India. I have a passion for
+            design and love for Web Developement.
           </p>
           <NavLink to="/about">
             <a href="#" class="btn">
