@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+## Rohit Chavan Resume
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Visit https://chavanrk.github.io/MyResume/  
 
-## Available Scripts
+###  OR
 
-In the project directory, you can run:
+## You can run:
 
 ### `npm start`
 
