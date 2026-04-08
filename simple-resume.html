@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohitkumar Chavan - Portfolio</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Google Fonts: Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Embedding index.css contents here */
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+        scroll-behavior: smooth;
+      }
+      html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+      }
+      html::-webkit-scrollbar {
+        width: 1rem;
+      }
+      html::-webkit-scrollbar-track {
+        background: #0d0d0d;
+      }
+      html::-webkit-scrollbar-thumb {
+        background: crimson;
+        border-radius: 5rem;
+      }
+      body {
+        background: #0d0d0d;
+        padding-bottom: 6.5rem;
+        color: #fff;
+      }
+      section {
+        padding: 5rem 9%;
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .heading {
+        text-align: center;
+        font-size: 6vw;
+        color: #fff;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+      }
+      .heading span {
+        color: crimson;
+      }
+      .btn {
+        display: inline-block;
+        margin-top: 1rem;
+        border-radius: 5rem;
+        background: crimson;
+        padding: 0.7rem;
+        font-size: 1.7rem;
+        color: #fff;
+        padding-left: 2rem;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+      .btn i {
+        height: 4rem;
+        width: 4rem;
+        line-height: 4rem;
+        font-size: 1.7rem;
+        text-align: center;
+        background: #fff;
+        color: crimson;
+        border-radius: 50%;
+        margin-left: 1rem;
+        transition: 0.2s linear;
+      }
+      .btn:hover i {
+        margin-left: 2rem;
+      }
+
+      /* Navbar */
+      .navbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        z-index: 1000;
+        align-items: flex-end;
+      }
+      .navbar a {
+        padding: 2rem;
+        font-size: 2rem;
+        background: #1a1a1a;
+        flex: 1;
+        color: #fff;
+        text-align: center;
+        transition: 0.2s linear;
+      }
+      .navbar a i {
+        color: crimson;
+        padding-right: 0.5rem;
+      }
+      .navbar a:hover {
+        background: crimson;
+      }
+      .navbar a:hover i {
+        color: #fff;
+      }
+
+      /* Home */
+      .home {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4rem;
+        justify-content: center;
+        flex-direction: row;
+      }
+      .home .image {
+        flex: 1 1 42rem;
+        text-align: center;
+        z-index: 20;
+      }
+      .home .image img {
+        height: 50rem;
+        width: 50rem;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        object-fit: cover;
+      }
+      .home .content {
+        flex: 1 1 42rem;
+        z-index: 20;
+      }
+      .home .content h3 {
+        font-size: 4rem;
+        padding-bottom: 0.5rem;
+      }
+      .home .content span {
+        font-size: 3rem;
+        color: crimson;
+        padding: 0.5rem 0;
+        display: block;
+      }
+      .home .content p {
+        font-size: 1.5rem;
+        color: #aaa;
+        padding: 1rem 0;
+        line-height: 2;
+      }
+
+      /* About */
+      .about .image {
+        text-align: center;
+        padding-bottom: 20px;
+        z-index: 20;
+      }
+      .about .image img {
+        height: 25rem;
+        width: 25rem;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        object-fit: cover;
+      }
+      .about .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        z-index: 20;
+      }
+      .about .row .info-container {
+        flex: 1 1 42rem;
+      }
+      .about .row .info-container h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+      }
+      .about .row .info-container .box-container {
+        padding: 1rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      .about .row .info-container .box-container .box {
+        flex: 1 1 20rem;
+      }
+      .about .row .info-container .box-container .box h3 {
+        font-size: 1.7rem;
+        padding: 1rem 0;
+        font-weight: normal;
+      }
+      .about .row .info-container .box-container .box h3 span {
+        color: #aaa;
+        font-weight: lighter;
+      }
+      .about .row .count-container {
+        flex: 1 1 42rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      .about .row .count-container .box {
+        flex: 1 1 20rem;
+        padding: 3rem 4rem;
+        border-radius: 0.5rem;
+        background: #1a1a1a;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+      }
+      .about .row .count-container .box h3 {
+        font-size: 5rem;
+        color: crimson;
+      }
+      .about .row .count-container .box p {
+        font-size: 2rem;
+        color: #aaa;
+      }
+
+      /* Skills */
+      .skills {
+        min-height: auto;
+        padding-top: 0;
+      }
+      .skills .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        gap: 1.5rem;
+        z-index: 20;
+      }
+      .skills .box-container .box {
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+        border-radius: 0.5rem;
+        background: #1a1a1a;
+        transition: 0.2s;
+      }
+      .skills .box-container .box:hover {
+        background: #fff;
+      }
+      .skills .box-container .box:hover h3 {
+        color: #0d0d0d;
+      }
+      .skills .box-container .box img {
+        height: 7rem;
+        margin-bottom: 1rem;
+        object-fit: contain;
+      }
+      .skills .box-container .box h3 {
+        font-size: 1.7rem;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+
+      /* Education/Journey */
+      .education {
+        min-height: auto;
+      }
+      .education .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 20;
+      }
+      .education .box-container .box {
+        flex: 1 1 40rem;
+        margin-left: 2rem;
+        padding: 3rem 0 3rem 3.5rem;
+        border-left: 0.1rem solid #aaa;
+        position: relative;
+      }
+      .education .box-container .box i {
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        font-size: 1.7rem;
+        border-radius: 50%;
+        background: crimson;
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        top: -1rem;
+        left: -2.5rem;
+      }
+      .education .box-container .box span {
+        font-size: 1.7rem;
+        border-radius: 5rem;
+        padding: 0.5rem 1.5rem;
+        background: #1a1a1a;
+      }
+      .education .box-container .box h3 {
+        font-size: 2rem;
+        padding: 1rem 0;
+        padding-top: 3rem;
+        font-weight: normal;
+      }
+      .education .box-container .box p {
+        font-size: 1.5rem;
+        color: #aaa;
+        line-height: 2;
+      }
+
+      /* Portfolio */
+      .portfolio {
+        text-align: center;
+      }
+      .portfolio .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .portfolio .box-container .box {
+        height: 30rem;
+        overflow: hidden;
+        position: relative;
+        border-radius: 1rem;
+      }
+      .portfolio .box-container .box:hover .content {
+        transform: translateY(0%);
+      }
+      .portfolio .box-container .box img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+      .portfolio .box-container .box .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        transform: translateY(-100%);
+        transition: 0.2s linear;
+      }
+      .portfolio .box-container .box .content h3 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: normal;
+      }
+      .portfolio .box-container .box .content p {
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        line-height: 2;
+        color: #aaa;
+      }
+      .portfolio .box-container .box .content a {
+        font-size: 2rem;
+        color: crimson;
+      }
+      .portfolio .box-container .box .content a:hover {
+        color: #fff;
+      }
+
+      /* Contact */
+      .contact .image {
+        text-align: center;
+        padding-bottom: 20px;
+        z-index: 20;
+      }
+      .contact .image img {
+        height: 25rem;
+        width: 25rem;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        object-fit: cover;
+      }
+      .contact .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        z-index: 20;
+      }
+      .contact .row .info-container {
+        width: 40rem;
+      }
+      .contact .row .info-container h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+      }
+      .contact .row .info-container p {
+        font-size: 1.5rem;
+        line-height: 2;
+        color: #aaa;
+        padding: 1rem 0;
+      }
+      .contact .row .info-container .box-container {
+        padding: 2rem 0;
+      }
+      .contact .row .info-container .box-container .box {
+        display: flex;
+        gap: 2rem;
+        padding: 1rem 0;
+      }
+      .contact .row .info-container .box-container .box i {
+        font-size: 3rem;
+        color: crimson;
+      }
+      .contact .row .info-container .box-container .box h3 {
+        font-size: 2rem;
+      }
+      .contact .row .info-container .share a {
+        font-size: 2rem;
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        border-radius: 50%;
+        background: #1a1a1a;
+        color: #fff;
+        text-align: center;
+        margin-right: 0.3rem;
+        display: inline-block;
+        transition: 0.2s;
+      }
+      .contact .row .info-container .share a:hover {
+        background: crimson;
+      }
+      .contact .row form {
+        flex: 1 1 42rem;
+      }
+      .contact .row form .inputBox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .contact .row form .inputBox input {
+        width: 49%;
+      }
+      .contact .row form .inputBox input,
+      .contact .row form textarea {
+        border-radius: 5rem;
+        padding: 1.2rem 1.8rem;
+        font-size: 1.6rem;
+        color: #fff;
+        margin: 0.7rem 0;
+        background: #1a1a1a;
+      }
+      .contact .row form textarea {
+        width: 100%;
+        border-radius: 1rem;
+        resize: none;
+        height: 18rem;
+      }
+      .contact .row form .btn {
+        padding: 1rem 3rem;
+        cursor: pointer;
+      }
+      .contact .row form .btn:hover {
+        background: #fff;
+        color: #0d0d0d;
+      }
+
+      /* Particles */
+      #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      @media (max-width: 1200px) {
+        html {
+          font-size: 55%;
+        }
+        section {
+          padding: 3rem 2rem;
+        }
+      }
+      @media (max-width: 768px) {
+        .heading {
+          font-size: 12vw;
+        }
+        .navbar a i {
+          padding: 0;
+        }
+        .navbar a span {
+          display: none;
+        }
+        .navbar a:hover {
+          padding-bottom: 2rem;
+        }
+        .home {
+          text-align: center;
+          gap: 2rem;
+        }
+        .home .image img {
+          height: 30rem;
+          width: 30rem;
+        }
+        .home .content h3 {
+          font-size: 3rem;
+        }
+        .home .content span {
+          font-size: 2.5rem;
+        }
+        .contact .row form .inputBox input {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+      }
+      @media (max-width: 450px) {
+        html {
+          font-size: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Particles config -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="#home"><i class="fas fa-home"></i> <span>home</span></a>
+      <a href="#about"><i class="fas fa-user"></i> <span>about</span></a>
+      <a href="#portfolio"
+        ><i class="fas fa-briefcase"></i> <span>portfolio</span></a
+      >
+      <a href="#contact"
+        ><i class="fas fa-address-book"></i> <span>contact</span></a
+      >
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+      <div class="image">
+        <img src="./MyResume/public/images/me.jpg" alt="Rohitkumar Chavan" />
+      </div>
+      <div class="content">
+        <h3>hi, i am Rohitkumar Chavan</h3>
+        <span>Full-Stack developer</span>
+        <p>
+          I'm a Full Stack Developer from Pune, India. I have a passion for
+          design and love for Web Development.
+        </p>
+        <a href="#about" class="btn"> about me <i class="fas fa-user"></i> </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h1 class="heading">about <span>me</span></h1>
+      <div class="image">
+        <img src="./MyResume/public/images/me.jpg" alt="Rohitkumar Chavan" />
+      </div>
+      <div class="row">
+        <div class="info-container">
+          <h1>Personal info</h1>
+          <div class="box-container">
+            <div class="box">
+              <h3><span>Name : </span> Rohitkumar Chavan</h3>
+              <h3><span>Age : </span> 25</h3>
+              <h3><span>Email : </span> chavanrohit413@gmail.com</h3>
+              <h3><span>Address : </span> Pune, India - 411016</h3>
+            </div>
+            <div class="box">
+              <h3><span>Skill : </span> full-stack</h3>
+              <h3><span>Experience : </span> 6 Months</h3>
+              <h3><span>Language : </span> English, Hindi, Marathi</h3>
+            </div>
+          </div>
+          <a
+            href="https://drive.google.com/file/d/1ba_zrMZEYUBZyTf7wZ4Yy6kVmUTj0JZl/view?usp=drive_link"
+            target="_blank"
+            class="btn"
+          >
+            Download CV <i class="fas fa-download"></i>
+          </a>
+        </div>
+        <div class="count-container">
+          <div class="box">
+            <h3>6</h3>
+            <p>Months of experience</p>
+          </div>
+          <div class="box">
+            <h3>10+</h3>
+            <p>project completed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+      <h1 class="heading"><span>my</span> skills</h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="./MyResume/public/images/icon-1.png" alt="" />
+          <h3>html</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/icon-2.png" alt="" />
+          <h3>css</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/icon-3.png" alt="" />
+          <h3>javascript</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/icon-6.png" alt="" />
+          <h3>react.js</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/react-native.png" alt="" />
+          <h3>react native</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/icon-7.png" alt="" />
+          <h3>Node js</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/github.jpg" alt="" />
+          <h3>GitHub</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/icon-8.png" alt="" />
+          <h3>BootStrap</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/icon-9.png" alt="" />
+          <h3>Material UI</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/icon-10.png" alt="" />
+          <h3>Mongo Db</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/icon-11.png" alt="" />
+          <h3>Mysql</h3>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/icon-12.png" alt="" />
+          <h3>Java</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+      <h1 class="heading"><span>my</span> Journey</h1>
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>May 2023 - Current</span>
+          <h3>Full Stack Developer</h3>
+          <p>Advance Digital Solutions, Vasai, Mumbai</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Oct-2022 - May-2023</span>
+          <h3>Associate Software Engineer Intern</h3>
+          <p>Refactor Academy, Bengaluru</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2015</span>
+          <h3>Class XII</h3>
+          <p>Walchand College Solapur (PCMB)</p>
+          <p>Percentage: 66.6%</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2015 - 2019</span>
+          <h3>Mechanical Engineering</h3>
+          <p>JSPM's Rajarshi Shahu College Of Engineering, Pune</p>
+          <p>CGPA: 7.75</p>
+        </div>
+        <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <span>2013</span>
+          <h3>Class X</h3>
+          <p>Navabharat Vidyalaya Darfal(Sina)</p>
+          <p>Percentage: 93%</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <h1 class="heading"><span>my</span> work</h1>
+      <div class="box-container">
+        <div class="box">
+          <img src="./MyResume/public/images/YORE-care.png" alt="" />
+          <div class="content">
+            <h3>Work Experience</h3>
+            <p>YORE Care App</p>
+            <a
+              target="_blank"
+              href="https://play.google.com/store/apps/details?id=com.yorecareapp&pli=1"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr1.JPG" alt="" />
+          <div class="content">
+            <h3>project 01</h3>
+            <p>MovieApp, Redux toolkit</p>
+            <a target="_blank" href="https://movieapp-redux-toolkit.netlify.app"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr2.JPG" alt="" />
+          <div class="content">
+            <h3>project 02</h3>
+            <p>E-commerce FakeStoreApi</p>
+            <a target="_blank" href="https://redux-e-comm.netlify.app">OPEN</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr3.JPG" alt="" />
+          <div class="content">
+            <h3>project 03</h3>
+            <p>Pokemon</p>
+            <a target="_blank" href="https://pokemon-api-rdc.netlify.app"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr4.JPG" alt="" />
+          <div class="content">
+            <h3>project 04</h3>
+            <p>React Chat App</p>
+            <a target="_blank" href="https://react-chat-app-rdc.netlify.app"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr5.JPG" alt="" />
+          <div class="content">
+            <h3>project 05</h3>
+            <p>Career App</p>
+            <a target="_blank" href="https://career-app-firebase.netlify.app"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr6.JPG" alt="" />
+          <div class="content">
+            <h3>project 06</h3>
+            <p>WhatsApp</p>
+            <a
+              target="_blank"
+              href="https://whatsapp-firebase-clone.netlify.app"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr8.JPG" alt="" />
+          <div class="content">
+            <h3>project 07</h3>
+            <p>TikTok</p>
+            <a target="_blank" href="https://tiktok-mern-rdc.netlify.app"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr7.JPG" alt="" />
+          <div class="content">
+            <h3>project 08</h3>
+            <p>Tinder</p>
+            <a target="_blank" href="https://tinder-mern-rdc.netlify.app"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr9.JPG" alt="" />
+          <div class="content">
+            <h3>project 09</h3>
+            <p>E-Com HooksBased</p>
+            <a
+              target="_blank"
+              href="https://fakestoreapi-hooksbased.netlify.app"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr11.JPG" alt="" />
+          <div class="content">
+            <h3>project 10</h3>
+            <p>Calculator</p>
+            <a target="_blank" href="https://react-calculator-rdc.netlify.app"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr12.JPG" alt="" />
+          <div class="content">
+            <h3>project 11</h3>
+            <p>Todo App</p>
+            <a target="_blank" href="https://react-todo-rdc.netlify.app"
+              >OPEN</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <img src="./MyResume/public/images/scr10.JPG" alt="" />
+          <div class="content">
+            <h3>project 12</h3>
+            <p>Myself</p>
+            <a href="#">OPEN</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h1 class="heading">contact <span>me</span></h1>
+      <div class="image">
+        <img src="./MyResume/public/images/me.jpg" alt="Rohitkumar Chavan" />
+      </div>
+      <div class="row">
+        <div class="info-container">
+          <h1>get in touch</h1>
+          <p>Feel free to contact</p>
+          <div class="box-container">
+            <div class="box">
+              <i class="fas fa-phone"></i>
+              <div class="info">
+                <h3>number :</h3>
+                <p>+91 8600842880</p>
+              </div>
+            </div>
+            <div class="box">
+              <i class="fas fa-envelope"></i>
+              <div class="info">
+                <h3>email :</h3>
+                <p>chavanrohit413@gmail.com</p>
+              </div>
+            </div>
+            <div class="box">
+              <i class="fas fa-map"></i>
+              <div class="info">
+                <h3>address :</h3>
+                <p>Pune, India - 411016</p>
+              </div>
+            </div>
+          </div>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a
+              href="https://github.com/chavanRk"
+              target="_blank"
+              class="fab fa-github"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/rohit-chavan-bab2201b4/"
+              target="_blank"
+              class="fab fa-linkedin"
+            ></a>
+          </div>
+        </div>
+        <form action="">
+          <div class="inputBox">
+            <input type="text" placeholder="Your Name" />
+            <input type="number" placeholder="Your Number" />
+          </div>
+          <div class="inputBox">
+            <input type="email" placeholder="Your Email" />
+            <input type="text" placeholder="Your Subject" />
+          </div>
+          <textarea
+            name=""
+            placeholder="Your message"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          <input type="Submit" value="send message" class="btn" />
+        </form>
+      </div>
+    </section>
+
+    <script src="./MyResume/public/particles.min.js"></script>
+    <script src="./MyResume/public/app.js"></script>
+  </body>
+</html>
