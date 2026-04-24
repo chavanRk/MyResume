@@ -40,10 +40,10 @@ function Home_Component() {
           </h3>
 
           <h3>hi, i am Rohitkumar Chavan</h3>
-          <span>Full-Stack developer</span>
+          <span>Full-Stack & Mobile Developer</span>
           <p>
-            I'm a Full Stack Developer from Pune, India. I have a passion for
-            design and love for Web Developement.
+            Software Engineer with 3+ years of experience specializing in React Native, 
+            Full-Stack development, and AI-enabled mobile applications from Pune, India.
           </p>
           <NavLink to="/about">
             <a href="#" class="btn">

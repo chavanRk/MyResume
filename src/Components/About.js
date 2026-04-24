@@ -60,11 +60,11 @@ function About() {
               <div className="box">
                 <h3>
                   {" "}
-                  <span>Skill : </span> full-stack{" "}
+                  <span>Skill : </span> Full-Stack & Mobile Development{" "}
                 </h3>
                 <h3>
                   {" "}
-                  <span>Experience : </span> 6 Months{" "}
+                  <span>Experience : </span> 3+ Years{" "}
                 </h3>
                 <h3>
                   {" "}
@@ -74,8 +74,8 @@ function About() {
             </div>
 
             <a
-              href="https://drive.google.com/file/d/1ba_zrMZEYUBZyTf7wZ4Yy6kVmUTj0JZl/view?usp=drive_link"
-              target="_blank"
+              href="resume/Rohitkumar_Chavan.pdf"
+              download="Rohitkumar_Chavan.pdf"
               className="btn"
             >
               {" "}
@@ -85,13 +85,13 @@ function About() {
 
           <div className="count-container">
             <div className="box">
-              <h3>6</h3>
-              <p>Months of experience</p>
+              <h3>3+</h3>
+              <p>Years of experience</p>
             </div>
 
             <div className="box">
-              <h3>10+</h3>
-              <p>project completed</p>
+              <h3>7+</h3>
+              <p>Apps Live on Play Store & App Store</p>
             </div>
           </div>
         </div>
@@ -162,17 +162,29 @@ function About() {
         </h1>
 
         <div className="box-container">
-          <div className="box">
+           <div className="box">
             <i className="fas fa-graduation-cap"></i>
-            <span>May 2023 - Current</span>
+            <span>Dec 2025 - Present</span>
             <h3>Full Stack Developer</h3>
-            <p>Advance Digital Solutions, Vasai, Mumbai</p>
+            <p>OneCell.AI, Mumbai</p>
+          </div>
+           <div className="box">
+            <i className="fas fa-graduation-cap"></i>
+            <span>Jun 2024 - Nov 2025</span>
+            <h3>Software Engineer</h3>
+            <p>ImpactGuru, Mumbai</p>
           </div>
           <div className="box">
             <i className="fas fa-graduation-cap"></i>
-            <span>Oct-2022 - May-2023</span>
-            <h3>Associate Software Engineer Intern</h3>
-            <p>Refactor Academy, Bengaluru</p>
+            <span>May 2023 - May 2024</span>
+            <h3>Full Stack Developer</h3>
+            <p>Advance Digital Solutions, Mumbai</p>
+          </div>
+          <div className="box">
+            <i className="fas fa-graduation-cap"></i>
+            <span>Nov 2022 - Apr 2023</span>
+            <h3>Software Engineer Intern</h3>
+            <p>Refactor Academy, Bengaluru (remote)</p>
           </div>
           <div className="box">
             <i className="fas fa-graduation-cap"></i>
