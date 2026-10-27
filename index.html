@@ -237,7 +237,7 @@
       }
       .skills .box-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
         gap: 1.5rem;
         z-index: 20;
       }
@@ -255,10 +255,20 @@
       .skills .box-container .box:hover h3 {
         color: #0d0d0d;
       }
-      .skills .box-container .box img {
-        height: 7rem;
+      .skills .box-container .box i {
+        font-size: 4rem;
+        color: crimson;
         margin-bottom: 1rem;
-        object-fit: contain;
+      }
+      .skills .box-container .box p {
+        font-size: 1.4rem;
+        color: #aaa;
+        line-height: 1.8;
+        margin-top: 1rem;
+        text-transform: none;
+      }
+      .skills .box-container .box:hover p {
+        color: #333;
       }
       .skills .box-container .box h3 {
         font-size: 1.7rem;
@@ -308,6 +318,7 @@
         font-weight: normal;
       }
       .education .box-container .box p {
+        text-transform: none;
         font-size: 1.5rem;
         color: #aaa;
         line-height: 2;
@@ -358,6 +369,7 @@
         font-weight: normal;
       }
       .portfolio .box-container .box .content p {
+        text-transform: none;
         padding: 1rem 0;
         font-size: 1.5rem;
         line-height: 2;
@@ -369,6 +381,20 @@
       }
       .portfolio .box-container .box .content a:hover {
         color: #fff;
+      }
+      .portfolio .box-container .box .logo {
+        object-fit: contain;
+        padding: 5rem;
+        background: #1a1a1a;
+      }
+      .portfolio .box-container .box .thumb {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1a1a1a;
+        font-size: 10rem;
+        color: crimson;
       }
 
       /* Contact */
@@ -554,8 +580,9 @@
         <span>Full-Stack & Mobile Developer</span>
         <p>
           Software Engineer with 3+ years of experience specializing in React
-          Native, Full-Stack development, and AI-enabled mobile applications
-          from Pune, India.
+          Native, Expo, and Full-Stack development. I build AI-enabled mobile
+          apps, LLM-powered features, and scalable backend systems, from
+          development to production.
         </p>
         <a href="#about" class="btn"> about me <i class="fas fa-user"></i> </a>
       </div>
@@ -573,12 +600,11 @@
           <div class="box-container">
             <div class="box">
               <h3><span>Name : </span> Rohitkumar Chavan</h3>
-              <h3><span>Age : </span> 25</h3>
               <h3><span>Email : </span> chavanrohit413@gmail.com</h3>
               <h3><span>Address : </span> Pune, India - 411016</h3>
             </div>
             <div class="box">
-              <h3><span>Skill : </span> Full-Stack & Mobile Development</h3>
+              <h3><span>Skill : </span> React Native, Full-Stack & AI/LLM</h3>
               <h3><span>Experience : </span> 3+ Years</h3>
               <h3><span>Language : </span> English, Hindi, Marathi</h3>
             </div>
@@ -609,52 +635,49 @@
       <h1 class="heading"><span>my</span> skills</h1>
       <div class="box-container">
         <div class="box">
-          <img src="./public/images/icon-1.png" alt="" />
-          <h3>html</h3>
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Development</h3>
+          <p>React Native, Expo, Android &amp; iOS Store Deployment, Reanimated, Gesture Handler</p>
         </div>
         <div class="box">
-          <img src="./public/images/icon-2.png" alt="" />
-          <h3>css</h3>
+          <i class="fas fa-robot"></i>
+          <h3>AI &amp; LLM</h3>
+          <p>RAG Pipeline, Prompt Engineering, AWS Bedrock Agents</p>
         </div>
         <div class="box">
-          <img src="./public/images/icon-3.png" alt="" />
-          <h3>javascript</h3>
+          <i class="fas fa-server"></i>
+          <h3>Backend &amp; APIs</h3>
+          <p>Node.js, Express.js, REST APIs, GraphQL</p>
         </div>
         <div class="box">
-          <img src="./public/images/icon-6.png" alt="" />
-          <h3>react.js</h3>
+          <i class="fas fa-code"></i>
+          <h3>Frontend</h3>
+          <p>React.js, TypeScript, JavaScript, HTML, CSS</p>
         </div>
         <div class="box">
-          <img src="./public/images/react-native.png" alt="" />
-          <h3>react native</h3>
+          <i class="fas fa-database"></i>
+          <h3>State &amp; Storage</h3>
+          <p>Redux, Context API, Jotai, MMKV, AsyncStorage</p>
         </div>
         <div class="box">
-          <img src="./public/images/icon-7.png" alt="" />
-          <h3>Node js</h3>
+          <i class="fas fa-plug"></i>
+          <h3>SDK &amp; Integrations</h3>
+          <p>Firebase (Analytics, Crashlytics, Remote Config, Performance, FCM), Razorpay</p>
         </div>
         <div class="box">
-          <img src="./public/images/github.jpg" alt="" />
-          <h3>GitHub</h3>
+          <i class="fas fa-route"></i>
+          <h3>Navigation</h3>
+          <p>Push Notifications, Deep Linking</p>
         </div>
         <div class="box">
-          <img src="./public/images/icon-8.png" alt="" />
-          <h3>BootStrap</h3>
+          <i class="fas fa-tachometer-alt"></i>
+          <h3>Performance &amp; Security</h3>
+          <p>Memoization, Bundle Optimization, Render Optimization, SSL Pinning</p>
         </div>
         <div class="box">
-          <img src="./public/images/icon-9.png" alt="" />
-          <h3>Material UI</h3>
-        </div>
-        <div class="box">
-          <img src="./public/images/icon-10.png" alt="" />
-          <h3>Mongo Db</h3>
-        </div>
-        <div class="box">
-          <img src="./public/images/icon-11.png" alt="" />
-          <h3>Mysql</h3>
-        </div>
-        <div class="box">
-          <img src="./public/images/icon-12.png" alt="" />
-          <h3>Java</h3>
+          <i class="fas fa-tools"></i>
+          <h3>Tooling</h3>
+          <p>Git, GitHub, Postman, Jira, Confluence</p>
         </div>
       </div>
     </section>
@@ -664,49 +687,39 @@
       <h1 class="heading"><span>my</span> Journey</h1>
       <div class="box-container">
         <div class="box">
-          <i class="fas fa-graduation-cap"></i>
+          <i class="fas fa-briefcase"></i>
           <span>Dec 2025 - Present</span>
           <h3>Full Stack Developer</h3>
           <p>OneCell.AI, Mumbai</p>
+          <p>Built DrG &amp; oSakhi, a RAG pipeline on AWS Bedrock Agents, and Node.js/GraphQL services for AI features.</p>
         </div>
         <div class="box">
-          <i class="fas fa-graduation-cap"></i>
+          <i class="fas fa-briefcase"></i>
           <span>Jun 2024 - Nov 2025</span>
           <h3>Software Engineer</h3>
           <p>ImpactGuru, Mumbai</p>
+          <p>Cut app load time by 35% and redundant API calls by 50%; raised crash-free sessions from 96% to 99.5%.</p>
         </div>
         <div class="box">
-          <i class="fas fa-graduation-cap"></i>
+          <i class="fas fa-briefcase"></i>
           <span>May 2023 - May 2024</span>
           <h3>Full Stack Developer</h3>
           <p>Advance Digital Solutions, Mumbai</p>
+          <p>React JS &amp; React Native apps for multiple clients; ABHA ID and Aadhaar verification integrations.</p>
         </div>
         <div class="box">
-          <i class="fas fa-graduation-cap"></i>
+          <i class="fas fa-briefcase"></i>
           <span>Nov 2022 - Apr 2023</span>
           <h3>Software Engineer Intern</h3>
           <p>Refactor Academy, Bengaluru (remote)</p>
-        </div>
-        <div class="box">
-          <i class="fas fa-graduation-cap"></i>
-          <span>2015</span>
-          <h3>Class XII</h3>
-          <p>Walchand College Solapur (PCMB)</p>
-          <p>Percentage: 66.6%</p>
+          <p>Full-stack development with React, Node.js and MongoDB.</p>
         </div>
         <div class="box">
           <i class="fas fa-graduation-cap"></i>
           <span>2015 - 2019</span>
-          <h3>Mechanical Engineering</h3>
-          <p>JSPM's Rajarshi Shahu College Of Engineering, Pune</p>
-          <p>CGPA: 7.75</p>
-        </div>
-        <div class="box">
-          <i class="fas fa-graduation-cap"></i>
-          <span>2013</span>
-          <h3>Class X</h3>
-          <p>Navabharat Vidyalaya Darfal(Sina)</p>
-          <p>Percentage: 93%</p>
+          <h3>Bachelor of Engineering (Mechanical)</h3>
+          <p>JSPM RSCOE, Pune</p>
+          <p>CGPA: 7.75 / 10</p>
         </div>
       </div>
     </section>
@@ -716,135 +729,64 @@
       <h1 class="heading"><span>my</span> work</h1>
       <div class="box-container">
         <div class="box">
-          <img src="./public/images/YORE-care.png" alt="" />
+          <img class="logo" src="./public/images/drg.png" alt="DrG app icon" />
           <div class="content">
-            <h3>Work Experience</h3>
-            <p>YORE Care App</p>
-            <a
-              target="_blank"
-              href="https://play.google.com/store/apps/details?id=com.yorecareapp&pli=1"
-              >OPEN</a
-            >
+            <h3>DrG</h3>
+            <p>OneCell.AI · Expo/React Native app for oncologists with AI chat over patient data via a RAG pipeline.</p>
+            <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.onecellai.drg">Play Store</a>
           </div>
         </div>
         <div class="box">
-          <img src="./public/images/scr1.JPG" alt="" />
+          <img class="logo" src="./public/images/osakhi.png" alt="oSakhi app icon" />
           <div class="content">
-            <h3>project 01</h3>
-            <p>MovieApp, Redux toolkit</p>
-            <a target="_blank" href="https://movieapp-redux-toolkit.netlify.app"
-              >OPEN</a
-            >
+            <h3>oSakhi</h3>
+            <p>OneCell.AI · Patient app with a voice chatbot (ElevenLabs) and AI document processing.</p>
+            <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.onecellai.osakhi">Play Store</a>
           </div>
         </div>
         <div class="box">
-          <img src="./public/images/scr2.JPG" alt="" />
+          <img class="logo" src="./public/images/impactguru-campaigner.png" alt="ImpactGuru Campaigner app icon" />
           <div class="content">
-            <h3>project 02</h3>
-            <p>E-commerce FakeStoreApi</p>
-            <a target="_blank" href="https://redux-e-comm.netlify.app">OPEN</a>
+            <h3>ImpactGuru Campaigner</h3>
+            <p>Campaign management app with authentication, API integration and performance optimizations.</p>
+            <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.impactguru.campaigner_app">Play Store</a>
+            <a target="_blank" rel="noopener" href="https://apps.apple.com/in/app/impact-guru-campaigner-app/id1610337492">App Store</a>
           </div>
         </div>
         <div class="box">
-          <img src="./public/images/scr3.JPG" alt="" />
+          <div class="thumb"><i class="fas fa-users-cog"></i></div>
           <div class="content">
-            <h3>project 03</h3>
-            <p>Pokemon</p>
-            <a target="_blank" href="https://pokemon-api-rdc.netlify.app"
-              >OPEN</a
-            >
+            <h3>ImpactGuru BD Outbound</h3>
+            <p>Internal React Native app for onboarding and managing campaigners with Redux multi-step workflows.</p>
           </div>
         </div>
         <div class="box">
-          <img src="./public/images/scr4.JPG" alt="" />
+          <img src="./public/images/YORE-care.png" alt="YORE Care app" />
           <div class="content">
-            <h3>project 04</h3>
-            <p>React Chat App</p>
-            <a target="_blank" href="https://react-chat-app-rdc.netlify.app"
-              >OPEN</a
-            >
+            <h3>YORE Care</h3>
+            <p>Full React Native app built from scratch with reusable components and API-driven architecture.</p>
           </div>
         </div>
         <div class="box">
-          <img src="./public/images/scr5.JPG" alt="" />
+          <div class="thumb"><i class="fas fa-map-marked-alt"></i></div>
           <div class="content">
-            <h3>project 05</h3>
-            <p>Career App</p>
-            <a target="_blank" href="https://career-app-firebase.netlify.app"
-              >OPEN</a
-            >
+            <h3>Gram Sampark</h3>
+            <p>Personal · Community app with location-based services and real-time data. Live on Indus App Store.</p>
           </div>
         </div>
         <div class="box">
-          <img src="./public/images/scr6.JPG" alt="" />
+          <div class="thumb"><i class="fas fa-wallet"></i></div>
           <div class="content">
-            <h3>project 06</h3>
-            <p>WhatsApp</p>
-            <a
-              target="_blank"
-              href="https://whatsapp-firebase-clone.netlify.app"
-              >OPEN</a
-            >
+            <h3>PFT - Expense Tracker</h3>
+            <p>Personal · Expense categorization, analytics and local data persistence. Live on Indus App Store.</p>
           </div>
         </div>
         <div class="box">
-          <img src="./public/images/scr8.JPG" alt="" />
+          <div class="thumb"><i class="fab fa-npm"></i></div>
           <div class="content">
-            <h3>project 07</h3>
-            <p>TikTok</p>
-            <a target="_blank" href="https://tiktok-mern-rdc.netlify.app"
-              >OPEN</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="./public/images/scr7.JPG" alt="" />
-          <div class="content">
-            <h3>project 08</h3>
-            <p>Tinder</p>
-            <a target="_blank" href="https://tinder-mern-rdc.netlify.app"
-              >OPEN</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="./public/images/scr9.JPG" alt="" />
-          <div class="content">
-            <h3>project 09</h3>
-            <p>E-Com HooksBased</p>
-            <a
-              target="_blank"
-              href="https://fakestoreapi-hooksbased.netlify.app"
-              >OPEN</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="./public/images/scr11.JPG" alt="" />
-          <div class="content">
-            <h3>project 10</h3>
-            <p>Calculator</p>
-            <a target="_blank" href="https://react-calculator-rdc.netlify.app"
-              >OPEN</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="./public/images/scr12.JPG" alt="" />
-          <div class="content">
-            <h3>project 11</h3>
-            <p>Todo App</p>
-            <a target="_blank" href="https://react-todo-rdc.netlify.app"
-              >OPEN</a
-            >
-          </div>
-        </div>
-        <div class="box">
-          <img src="./public/images/scr10.JPG" alt="" />
-          <div class="content">
-            <h3>project 12</h3>
-            <p>Myself</p>
-            <a href="#">OPEN</a>
+            <h3>rn-downloader</h3>
+            <p>Open-source React Native file downloading library published on npm.</p>
+            <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/rn-downloader">npm</a>
           </div>
         </div>
       </div>
@@ -884,16 +826,16 @@
             </div>
           </div>
           <div class="share">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-twitter"></a>
             <a
               href="https://github.com/chavanRk"
               target="_blank"
+              rel="noopener"
               class="fab fa-github"
             ></a>
             <a
               href="https://www.linkedin.com/in/rohit-chavan-bab2201b4/"
               target="_blank"
+              rel="noopener"
               class="fab fa-linkedin"
             ></a>
           </div>
