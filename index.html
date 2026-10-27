@@ -3,7 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rohitkumar Chavan - Portfolio</title>
+    <title>Rohitkumar Chavan · React Native &amp; AI Engineer</title>
+    <meta
+      name="description"
+      content="Software Engineer with 3+ years in React Native, Expo and full-stack development. Builds AI-powered healthcare apps (RAG on AWS Bedrock, voice AI) that are live in production."
+    />
+    <link rel="icon" type="image/svg+xml" href="./public/images/favicon.svg" />
+    <!-- Link previews (LinkedIn, WhatsApp, Slack, email) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://chavanrk.github.io/MyResume/" />
+    <meta
+      property="og:title"
+      content="Rohitkumar Chavan · React Native &amp; AI Engineer"
+    />
+    <meta
+      property="og:description"
+      content="3+ years in React Native &amp; full-stack. Built AI healthcare apps with RAG on AWS Bedrock and voice AI, live in production."
+    />
+    <meta
+      property="og:image"
+      content="https://chavanrk.github.io/MyResume/public/images/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -24,7 +47,6 @@
         text-decoration: none;
         outline: none;
         border: none;
-        text-transform: capitalize;
         scroll-behavior: smooth;
       }
       html {
@@ -163,71 +185,185 @@
         line-height: 2;
       }
 
-      /* About */
-      .about .image {
-        text-align: center;
-        padding-bottom: 20px;
-        z-index: 20;
-      }
-      .about .image img {
-        height: 25rem;
-        width: 25rem;
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-        object-fit: cover;
-      }
-      .about .row {
-        display: flex;
+      .home .content .open {
+        display: inline-flex;
         align-items: center;
+        gap: 0.8rem;
+        font-size: 1.4rem;
+        padding: 0.6rem 1.4rem;
+        margin: 0.5rem 0;
+        border-radius: 5rem;
+        background: rgba(46, 204, 113, 0.12);
+        color: #2ecc71;
+      }
+      .home .content .open i {
+        font-size: 0.8rem;
+      }
+      .home .content .actions {
+        display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        align-items: center;
+        gap: 1.2rem;
+      }
+      .btn-outline {
+        background: transparent;
+        box-shadow: inset 0 0 0 0.2rem crimson;
+      }
+
+      /* Shared: share icons, bullet points, tech tags */
+      .share a {
+        font-size: 2rem;
+        height: 4.5rem;
+        width: 4.5rem;
+        line-height: 4.5rem;
+        border-radius: 50%;
+        background: #1a1a1a;
+        color: #fff;
+        text-align: center;
+        margin-right: 0.3rem;
+        display: inline-block;
+        transition: 0.2s;
+      }
+      .share a:hover {
+        background: crimson;
+      }
+      .points {
+        padding: 0.5rem 0 0 2rem;
+      }
+      .points li {
+        font-size: 1.5rem;
+        color: #ccc;
+        line-height: 1.9;
+        padding: 0.2rem 0;
+      }
+      .points li b {
+        color: #fff;
+        font-weight: 500;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        list-style: none;
+        padding-top: 1.5rem;
+      }
+      .tags li {
+        font-size: 1.2rem;
+        padding: 0.4rem 1.2rem;
+        border: 0.1rem solid crimson;
+        border-radius: 5rem;
+        color: #fff;
+      }
+
+      /* Impact */
+      .impact {
+        min-height: auto;
+        padding-top: 0;
+      }
+      .impact .box-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
         z-index: 20;
       }
-      .about .row .info-container {
-        flex: 1 1 42rem;
-      }
-      .about .row .info-container h1 {
-        font-size: 3rem;
-        text-transform: uppercase;
-        padding-bottom: 1rem;
-      }
-      .about .row .info-container .box-container {
-        padding: 1rem 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-      }
-      .about .row .info-container .box-container .box {
-        flex: 1 1 20rem;
-      }
-      .about .row .info-container .box-container .box h3 {
-        font-size: 1.7rem;
-        padding: 1rem 0;
-        font-weight: normal;
-      }
-      .about .row .info-container .box-container .box h3 span {
-        color: #aaa;
-        font-weight: lighter;
-      }
-      .about .row .count-container {
-        flex: 1 1 42rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-      }
-      .about .row .count-container .box {
-        flex: 1 1 20rem;
-        padding: 3rem 4rem;
-        border-radius: 0.5rem;
+      .impact .box {
         background: #1a1a1a;
+        border-radius: 1rem;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
       }
-      .about .row .count-container .box h3 {
-        font-size: 5rem;
+      .impact .box h3 {
+        font-size: 4rem;
         color: crimson;
       }
-      .about .row .count-container .box p {
-        font-size: 2rem;
+      .impact .box p {
+        font-size: 1.4rem;
         color: #aaa;
+        line-height: 1.6;
+      }
+
+      /* Experience (reuses the education timeline) */
+      .education.experience .box-container .box {
+        flex-basis: 100%;
+      }
+
+      /* Featured work case studies */
+      .portfolio .case {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4rem;
+        text-align: left;
+        background: #1a1a1a;
+        border-radius: 1rem;
+        padding: 3rem;
+        margin-bottom: 3rem;
+        z-index: 20;
+      }
+      .portfolio .case .shots {
+        flex: 1 1 40rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .portfolio .case .shots img {
+        width: 30%;
+        max-width: 18rem;
+        border-radius: 1rem;
+      }
+      .portfolio .case .info {
+        flex: 1 1 45rem;
+      }
+      .portfolio .case .title {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .portfolio .case .title img {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 1.2rem;
+      }
+      .portfolio .case h3 {
+        font-size: 2.8rem;
+        font-weight: 500;
+      }
+      .portfolio .case .meta {
+        font-size: 1.4rem;
+        color: #aaa;
+      }
+      .portfolio .case h4 {
+        font-size: 1.3rem;
+        color: crimson;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        margin-top: 2rem;
+      }
+      .portfolio .case p {
+        font-size: 1.5rem;
+        color: #ccc;
+        line-height: 1.9;
+      }
+      .portfolio .case .btn {
+        margin-top: 2.5rem;
+      }
+      .portfolio .sub-heading {
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin: 3rem 0 2rem;
+      }
+      .portfolio .sub-heading span {
+        color: crimson;
+      }
+      .portfolio .box-container .box .content h3 small {
+        font-size: 1.4rem;
+        font-weight: normal;
+        color: #aaa;
+      }
+      .portfolio .box-container .tags {
+        justify-content: center;
+        padding: 0.5rem 0 1.5rem;
       }
 
       /* Skills */
@@ -237,7 +373,7 @@
       }
       .skills .box-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
         z-index: 20;
       }
@@ -265,7 +401,6 @@
         color: #aaa;
         line-height: 1.8;
         margin-top: 1rem;
-        text-transform: none;
       }
       .skills .box-container .box:hover p {
         color: #333;
@@ -318,7 +453,6 @@
         font-weight: normal;
       }
       .education .box-container .box p {
-        text-transform: none;
         font-size: 1.5rem;
         color: #aaa;
         line-height: 2;
@@ -330,71 +464,51 @@
       }
       .portfolio .box-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
         margin-bottom: 2rem;
       }
       .portfolio .box-container .box {
-        height: 30rem;
         overflow: hidden;
-        position: relative;
         border-radius: 1rem;
+        background: #1a1a1a;
       }
-      .portfolio .box-container .box:hover .content {
-        transform: translateY(0%);
+      .portfolio .box-container .box img,
+      .portfolio .box-container .box .thumb {
+        height: 18rem;
+        width: 100%;
       }
       .portfolio .box-container .box img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+        object-fit: contain;
+        padding: 3rem;
       }
-      .portfolio .box-container .box .content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: #1a1a1a;
+      .portfolio .box-container .box .thumb {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 2rem;
-        transform: translateY(-100%);
-        transition: 0.2s linear;
+        font-size: 8rem;
+        color: crimson;
+      }
+      .portfolio .box-container .box .content {
+        padding: 0 2rem 2rem;
       }
       .portfolio .box-container .box .content h3 {
-        font-size: 2.5rem;
-        text-transform: uppercase;
-        font-weight: normal;
+        font-size: 2rem;
+        font-weight: 500;
       }
       .portfolio .box-container .box .content p {
-        text-transform: none;
         padding: 1rem 0;
-        font-size: 1.5rem;
-        line-height: 2;
+        font-size: 1.4rem;
+        line-height: 1.8;
         color: #aaa;
       }
       .portfolio .box-container .box .content a {
-        font-size: 2rem;
+        font-size: 1.6rem;
         color: crimson;
+        margin: 0 1rem;
       }
       .portfolio .box-container .box .content a:hover {
         color: #fff;
-      }
-      .portfolio .box-container .box .logo {
-        object-fit: contain;
-        padding: 5rem;
-        background: #1a1a1a;
-      }
-      .portfolio .box-container .box .thumb {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #1a1a1a;
-        font-size: 10rem;
-        color: crimson;
       }
 
       /* Contact */
@@ -445,55 +559,36 @@
       .contact .row .info-container .box-container .box h3 {
         font-size: 2rem;
       }
-      .contact .row .info-container .share a {
-        font-size: 2rem;
-        height: 4.5rem;
-        width: 4.5rem;
-        line-height: 4.5rem;
-        border-radius: 50%;
-        background: #1a1a1a;
-        color: #fff;
-        text-align: center;
-        margin-right: 0.3rem;
-        display: inline-block;
-        transition: 0.2s;
+      .contact .row .info-container .box-container .box a {
+        color: inherit;
       }
-      .contact .row .info-container .share a:hover {
-        background: crimson;
-      }
-      .contact .row form {
+      .contact .row .cta {
         flex: 1 1 42rem;
+        text-align: center;
+        background: #1a1a1a;
+        border-radius: 1rem;
+        padding: 5rem 3rem;
+        z-index: 20;
       }
-      .contact .row form .inputBox {
+      .contact .row .cta h3 {
+        font-size: 2.6rem;
+        font-weight: 500;
+      }
+      .contact .row .cta p {
+        font-size: 1.6rem;
+        color: #aaa;
+        line-height: 1.8;
+        padding: 1rem 0 2rem;
+      }
+      .contact .row .cta .cta-actions {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 1.5rem;
       }
-      .contact .row form .inputBox input {
-        width: 49%;
-      }
-      .contact .row form .inputBox input,
-      .contact .row form textarea {
-        border-radius: 5rem;
-        padding: 1.2rem 1.8rem;
-        font-size: 1.6rem;
-        color: #fff;
-        margin: 0.7rem 0;
-        background: #1a1a1a;
-      }
-      .contact .row form textarea {
-        width: 100%;
-        border-radius: 1rem;
-        resize: none;
-        height: 18rem;
-      }
-      .contact .row form .btn {
-        padding: 1rem 3rem;
-        cursor: pointer;
-      }
-      .contact .row form .btn:hover {
-        background: #fff;
-        color: #0d0d0d;
+      .contact .row .cta .btn {
+        font-size: 2.2rem;
+        padding: 1rem 1rem 1rem 3rem;
       }
 
       /* Particles */
@@ -515,6 +610,15 @@
           padding: 3rem 2rem;
         }
       }
+      @media (max-width: 991px) {
+        .skills .box-container,
+        .portfolio .box-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .impact .box-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
       @media (max-width: 768px) {
         .heading {
           font-size: 12vw;
@@ -532,6 +636,9 @@
           text-align: center;
           gap: 2rem;
         }
+        .home .content .actions {
+          justify-content: center;
+        }
         .home .image img {
           height: 30rem;
           width: 30rem;
@@ -542,14 +649,20 @@
         .home .content span {
           font-size: 2.5rem;
         }
-        .contact .row form .inputBox input {
-          width: 100%;
-          margin-bottom: 1rem;
-        }
       }
       @media (max-width: 450px) {
         html {
           font-size: 50%;
+        }
+        .skills .box-container,
+        .portfolio .box-container {
+          grid-template-columns: 1fr;
+        }
+        .impact .box-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .portfolio .case {
+          padding: 2rem;
         }
       }
     </style>
@@ -560,13 +673,15 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-      <a href="#home"><i class="fas fa-home"></i> <span>home</span></a>
-      <a href="#about"><i class="fas fa-user"></i> <span>about</span></a>
+      <a href="#home"><i class="fas fa-home"></i> <span>Home</span></a>
+      <a href="#experience"
+        ><i class="fas fa-briefcase"></i> <span>Experience</span></a
+      >
       <a href="#portfolio"
-        ><i class="fas fa-briefcase"></i> <span>portfolio</span></a
+        ><i class="fas fa-laptop-code"></i> <span>Work</span></a
       >
       <a href="#contact"
-        ><i class="fas fa-address-book"></i> <span>contact</span></a
+        ><i class="fas fa-address-book"></i> <span>Contact</span></a
       >
     </nav>
 
@@ -576,39 +691,19 @@
         <img src="./public/images/me.jpg" alt="Rohitkumar Chavan" />
       </div>
       <div class="content">
-        <h3>hi, i am Rohitkumar Chavan</h3>
-        <span>Full-Stack & Mobile Developer</span>
+        <h3>Hi, I am Rohitkumar Chavan</h3>
+        <span>React Native &amp; AI Engineer</span>
+        <div class="open">
+          <i class="fas fa-circle"></i> Open to Senior React Native /
+          Full-Stack roles
+        </div>
         <p>
-          Software Engineer with 3+ years of experience specializing in React
-          Native, Expo, and Full-Stack development. I build AI-enabled mobile
-          apps, LLM-powered features, and scalable backend systems, from
-          development to production.
+          Software Engineer with 3+ years of experience in React Native, Expo
+          and Full-Stack development. I build AI-enabled mobile apps,
+          LLM-powered features and scalable backend systems, and own them from
+          development to production. Based in Pune, India.
         </p>
-        <a href="#about" class="btn"> about me <i class="fas fa-user"></i> </a>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-      <h1 class="heading">about <span>me</span></h1>
-      <div class="image">
-        <img src="./public/images/me.jpg" alt="Rohitkumar Chavan" />
-      </div>
-      <div class="row">
-        <div class="info-container">
-          <h1>Personal info</h1>
-          <div class="box-container">
-            <div class="box">
-              <h3><span>Name : </span> Rohitkumar Chavan</h3>
-              <h3><span>Email : </span> chavanrohit413@gmail.com</h3>
-              <h3><span>Address : </span> Pune, India - 411016</h3>
-            </div>
-            <div class="box">
-              <h3><span>Skill : </span> React Native, Full-Stack & AI/LLM</h3>
-              <h3><span>Experience : </span> 3+ Years</h3>
-              <h3><span>Language : </span> English, Hindi, Marathi</h3>
-            </div>
-          </div>
+        <div class="actions">
           <a
             href="resume/Rohitkumar_Chavan.pdf"
             download="Rohitkumar_Chavan.pdf"
@@ -616,15 +711,232 @@
           >
             Download CV <i class="fas fa-download"></i>
           </a>
-        </div>
-        <div class="count-container">
-          <div class="box">
-            <h3>3+</h3>
-            <p>Years of experience</p>
+          <a href="mailto:chavanrohit413@gmail.com" class="btn btn-outline">
+            Email Me <i class="fas fa-envelope"></i>
+          </a>
+          <div class="share">
+            <a
+              href="https://github.com/chavanRk"
+              target="_blank"
+              rel="noopener"
+              class="fab fa-github"
+              aria-label="GitHub"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/rohit-chavan-bab2201b4/"
+              target="_blank"
+              rel="noopener"
+              class="fab fa-linkedin"
+              aria-label="LinkedIn"
+            ></a>
           </div>
-          <div class="box">
-            <h3>7+</h3>
-            <p>Apps Live on Play Store & App Store</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Strip -->
+    <section class="impact">
+      <div class="box-container">
+        <div class="box"><h3>3+</h3><p>Years of experience</p></div>
+        <div class="box"><h3>7</h3><p>Apps in production</p></div>
+        <div class="box"><h3>35%</h3><p>Faster app load</p></div>
+        <div class="box"><h3>50%</h3><p>Fewer API calls</p></div>
+        <div class="box"><h3>99.5%</h3><p>Crash-free sessions (from 96%)</p></div>
+        <div class="box"><h3>1</h3><p>Open-source npm package</p></div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="education experience" id="experience">
+      <h1 class="heading">work <span>experience</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-briefcase"></i>
+          <span>Dec 2025 - Present</span>
+          <h3>Full Stack Developer</h3>
+          <p>OneCell.AI, Mumbai</p>
+          <ul class="points">
+            <li>Built and deployed <b>DrG</b> (doctor app) and <b>oSakhi</b> (patient app), both live on Play Store and App Store.</li>
+            <li>Designed a <b>RAG pipeline on AWS Bedrock Agents</b> for context-aware AI chat over clinical data, with prompt strategies that improve accuracy and reduce hallucinations.</li>
+            <li>Built an AI patient chatbot with <b>voice interactions using ElevenLabs</b>, and an <b>AI document pipeline</b> that extracts structured data from medical documents.</li>
+            <li>Developed <b>Node.js &amp; GraphQL</b> services that connect the mobile apps, backend APIs and LLM pipelines.</li>
+          </ul>
+          <ul class="tags">
+            <li>React Native</li><li>Expo</li><li>AWS Bedrock</li><li>RAG</li><li>LLM</li><li>ElevenLabs</li><li>Node.js</li><li>GraphQL</li>
+          </ul>
+        </div>
+        <div class="box">
+          <i class="fas fa-briefcase"></i>
+          <span>Jun 2024 - Nov 2025</span>
+          <h3>Software Engineer</h3>
+          <p>ImpactGuru, Mumbai</p>
+          <ul class="points">
+            <li>Built and scaled React Native apps used by <b>thousands of active users</b> in production.</li>
+            <li>Reduced app load time by <b>35%</b> through render optimization and efficient state management, and cut redundant API calls by <b>50%</b> with better data fetching and caching.</li>
+            <li>Improved crash-free sessions from <b>96% to 99.5%</b> by monitoring and fixing production issues with Crashlytics.</li>
+            <li>Owned Play Store and App Store releases across multiple versions with <b>zero critical release failures</b>.</li>
+          </ul>
+          <ul class="tags">
+            <li>React Native</li><li>Redux</li><li>Firebase</li><li>Crashlytics</li><li>Performance</li><li>Play Store</li><li>App Store</li>
+          </ul>
+        </div>
+        <div class="box">
+          <i class="fas fa-briefcase"></i>
+          <span>May 2023 - May 2024</span>
+          <h3>Full Stack Developer</h3>
+          <p>Advance Digital Solutions, Mumbai</p>
+          <ul class="points">
+            <li>Developed and maintained React JS and React Native apps for multiple production clients.</li>
+            <li>Implemented Redux global state to handle complex asynchronous API workflows and large data sets.</li>
+            <li>Integrated <b>ABHA ID</b> creation and <b>Aadhaar</b> verification APIs for secure, compliant user onboarding.</li>
+            <li>Delivered pixel-perfect UI from Figma designs, shortening design-to-development cycles.</li>
+          </ul>
+          <ul class="tags">
+            <li>React.js</li><li>React Native</li><li>Redux</li><li>REST APIs</li><li>Figma</li>
+          </ul>
+        </div>
+        <div class="box">
+          <i class="fas fa-briefcase"></i>
+          <span>Nov 2022 - Apr 2023</span>
+          <h3>Software Engineer Intern</h3>
+          <p>Refactor Academy, Bengaluru (remote)</p>
+          <ul class="points">
+            <li>Contributed to full-stack development using React, Node.js and MongoDB in real-world applications.</li>
+            <li>Built a strong foundation in JavaScript, React lifecycle methods and backend API development.</li>
+          </ul>
+          <ul class="tags">
+            <li>React</li><li>Node.js</li><li>MongoDB</li><li>JavaScript</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <h1 class="heading">featured <span>work</span></h1>
+
+      <div class="case">
+        <div class="shots">
+          <img src="./public/images/drg-shot-1.png" alt="DrG AI-powered report insights screen" />
+          <img src="./public/images/drg-shot-2.png" alt="DrG clinical workspace screen" />
+          <img src="./public/images/drg-shot-3.png" alt="DrG patient search with AI chat" />
+        </div>
+        <div class="info">
+          <div class="title">
+            <img src="./public/images/drg.png" alt="DrG app icon" />
+            <div>
+              <h3>DrG</h3>
+              <p class="meta">OneCell.AI · Doctor app for oncologists</p>
+            </div>
+          </div>
+          <h4>Problem</h4>
+          <p>Oncologists and clinical teams switch between systems to find patient reports, track test orders and make sense of complex genomic reports during care.</p>
+          <h4>What I built</h4>
+          <ul class="points">
+            <li>An <b>Expo / React Native</b> app for patient reports, test orders with status tracking, and patient search.</li>
+            <li>AI chat over patient data, powered by a <b>RAG pipeline on AWS Bedrock Agents</b>, that returns structured answers.</li>
+            <li>Prompt strategies that improve answer accuracy and reduce hallucinations on clinical data.</li>
+            <li><b>Node.js &amp; GraphQL</b> services that feed the AI pipeline.</li>
+          </ul>
+          <h4>My role</h4>
+          <p>Full Stack Developer. Built and deployed the app, and designed and implemented the RAG pipeline and the backend services behind it.</p>
+          <h4>Stack</h4>
+          <ul class="tags">
+            <li>Expo</li><li>React Native</li><li>AWS Bedrock Agents</li><li>RAG</li><li>Prompt Engineering</li><li>Node.js</li><li>GraphQL</li>
+          </ul>
+          <a class="btn" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.onecellai.drg">
+            Google Play <i class="fab fa-google-play"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="case">
+        <div class="shots">
+          <img src="./public/images/osakhi-shot-1.png" alt="oSakhi home screen" />
+          <img src="./public/images/osakhi-shot-2.png" alt="oSakhi voice companion screen" />
+          <img src="./public/images/osakhi-shot-3.png" alt="oSakhi AI chat screen" />
+        </div>
+        <div class="info">
+          <div class="title">
+            <img src="./public/images/osakhi.png" alt="oSakhi app icon" />
+            <div>
+              <h3>oSakhi</h3>
+              <p class="meta">OneCell.AI · AI health companion for patients</p>
+            </div>
+          </div>
+          <h4>Problem</h4>
+          <p>Patients have medical documents scattered across paper and phones, and find it hard to understand what their reports mean.</p>
+          <h4>What I built</h4>
+          <ul class="points">
+            <li>An AI health assistant patients can talk to, with <b>real-time voice conversations using ElevenLabs</b>.</li>
+            <li>An <b>AI document processing pipeline</b> that extracts structured data from scanned prescriptions, lab reports and discharge summaries.</li>
+            <li>The patient app around it: document scanning and upload, medication and symptom tracking, and reminders.</li>
+          </ul>
+          <h4>My role</h4>
+          <p>Full Stack Developer. Built and deployed the app, the voice chatbot and the document processing pipeline.</p>
+          <h4>Stack</h4>
+          <ul class="tags">
+            <li>React Native</li><li>ElevenLabs</li><li>LLM</li><li>AI Document Processing</li><li>Node.js</li><li>GraphQL</li>
+          </ul>
+          <a class="btn" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.onecellai.osakhi">
+            Google Play <i class="fab fa-google-play"></i>
+          </a>
+        </div>
+      </div>
+
+      <h2 class="sub-heading">More <span>work</span></h2>
+      <div class="box-container">
+        <div class="box">
+          <img src="./public/images/impactguru-campaigner.png" alt="ImpactGuru Campaigner app icon" />
+          <div class="content">
+            <h3>ImpactGuru Campaigner</h3>
+            <p>Production app for campaign management with authentication, API integration and performance optimizations.</p>
+            <ul class="tags"><li>React Native</li><li>Authentication</li><li>REST APIs</li><li>Performance</li></ul>
+            <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.impactguru.campaigner_app">Play Store</a>
+            <a target="_blank" rel="noopener" href="https://apps.apple.com/in/app/impact-guru-campaigner-app/id1610337492">App Store</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./public/images/impactguru-outbound.png" alt="ImpactGuru OutBound app icon" />
+          <div class="content">
+            <h3>ImpactGuru BD Outbound</h3>
+            <p>Internal app for onboarding and managing campaigners, with complex multi-step workflows.</p>
+            <ul class="tags"><li>React Native</li><li>Redux</li><li>Multi-step Forms</li></ul>
+            <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.impact_cm">Play Store</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="./public/images/YORE-care.png" alt="YORE Care app" />
+          <div class="content">
+            <h3>YORE Care <small>(now symbl)</small></h3>
+            <p>Built the original YORE Care app from scratch in React Native, with reusable components and API-driven architecture. It has since been rebranded as symbl.</p>
+            <ul class="tags"><li>React Native</li><li>REST APIs</li><li>Reusable Components</li></ul>
+            <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.yore.care.app">Play Store</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="thumb"><i class="fas fa-map-marked-alt"></i></div>
+          <div class="content">
+            <h3>Gram Sampark</h3>
+            <p>Personal · Community app with location-based services and real-time data. Live on Indus App Store.</p>
+            <ul class="tags"><li>React Native</li><li>Location Services</li><li>Real-time Data</li></ul>
+          </div>
+        </div>
+        <div class="box">
+          <div class="thumb"><i class="fas fa-wallet"></i></div>
+          <div class="content">
+            <h3>PFT - Expense Tracker</h3>
+            <p>Personal · Expense categorization, analytics and local data persistence. Live on Indus App Store.</p>
+            <ul class="tags"><li>React Native</li><li>Analytics</li><li>Local Storage</li></ul>
+          </div>
+        </div>
+        <div class="box">
+          <div class="thumb"><i class="fab fa-npm"></i></div>
+          <div class="content">
+            <h3>rn-downloader</h3>
+            <p>Open-source React Native file downloading library published on npm.</p>
+            <ul class="tags"><li>React Native</li><li>Open Source</li><li>npm</li></ul>
+            <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/rn-downloader">npm</a>
           </div>
         </div>
       </div>
@@ -683,111 +995,15 @@
     </section>
 
     <!-- Education Section -->
-    <section class="education">
-      <h1 class="heading"><span>my</span> Journey</h1>
+    <section class="education" id="education">
+      <h1 class="heading"><span>my</span> education</h1>
       <div class="box-container">
-        <div class="box">
-          <i class="fas fa-briefcase"></i>
-          <span>Dec 2025 - Present</span>
-          <h3>Full Stack Developer</h3>
-          <p>OneCell.AI, Mumbai</p>
-          <p>Built DrG &amp; oSakhi, a RAG pipeline on AWS Bedrock Agents, and Node.js/GraphQL services for AI features.</p>
-        </div>
-        <div class="box">
-          <i class="fas fa-briefcase"></i>
-          <span>Jun 2024 - Nov 2025</span>
-          <h3>Software Engineer</h3>
-          <p>ImpactGuru, Mumbai</p>
-          <p>Cut app load time by 35% and redundant API calls by 50%; raised crash-free sessions from 96% to 99.5%.</p>
-        </div>
-        <div class="box">
-          <i class="fas fa-briefcase"></i>
-          <span>May 2023 - May 2024</span>
-          <h3>Full Stack Developer</h3>
-          <p>Advance Digital Solutions, Mumbai</p>
-          <p>React JS &amp; React Native apps for multiple clients; ABHA ID and Aadhaar verification integrations.</p>
-        </div>
-        <div class="box">
-          <i class="fas fa-briefcase"></i>
-          <span>Nov 2022 - Apr 2023</span>
-          <h3>Software Engineer Intern</h3>
-          <p>Refactor Academy, Bengaluru (remote)</p>
-          <p>Full-stack development with React, Node.js and MongoDB.</p>
-        </div>
         <div class="box">
           <i class="fas fa-graduation-cap"></i>
           <span>2015 - 2019</span>
           <h3>Bachelor of Engineering (Mechanical)</h3>
           <p>JSPM RSCOE, Pune</p>
           <p>CGPA: 7.75 / 10</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-      <h1 class="heading"><span>my</span> work</h1>
-      <div class="box-container">
-        <div class="box">
-          <img class="logo" src="./public/images/drg.png" alt="DrG app icon" />
-          <div class="content">
-            <h3>DrG</h3>
-            <p>OneCell.AI · Expo/React Native app for oncologists with AI chat over patient data via a RAG pipeline.</p>
-            <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.onecellai.drg">Play Store</a>
-          </div>
-        </div>
-        <div class="box">
-          <img class="logo" src="./public/images/osakhi.png" alt="oSakhi app icon" />
-          <div class="content">
-            <h3>oSakhi</h3>
-            <p>OneCell.AI · Patient app with a voice chatbot (ElevenLabs) and AI document processing.</p>
-            <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.onecellai.osakhi">Play Store</a>
-          </div>
-        </div>
-        <div class="box">
-          <img class="logo" src="./public/images/impactguru-campaigner.png" alt="ImpactGuru Campaigner app icon" />
-          <div class="content">
-            <h3>ImpactGuru Campaigner</h3>
-            <p>Campaign management app with authentication, API integration and performance optimizations.</p>
-            <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.impactguru.campaigner_app">Play Store</a>
-            <a target="_blank" rel="noopener" href="https://apps.apple.com/in/app/impact-guru-campaigner-app/id1610337492">App Store</a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="thumb"><i class="fas fa-users-cog"></i></div>
-          <div class="content">
-            <h3>ImpactGuru BD Outbound</h3>
-            <p>Internal React Native app for onboarding and managing campaigners with Redux multi-step workflows.</p>
-          </div>
-        </div>
-        <div class="box">
-          <img src="./public/images/YORE-care.png" alt="YORE Care app" />
-          <div class="content">
-            <h3>YORE Care</h3>
-            <p>Full React Native app built from scratch with reusable components and API-driven architecture.</p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="thumb"><i class="fas fa-map-marked-alt"></i></div>
-          <div class="content">
-            <h3>Gram Sampark</h3>
-            <p>Personal · Community app with location-based services and real-time data. Live on Indus App Store.</p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="thumb"><i class="fas fa-wallet"></i></div>
-          <div class="content">
-            <h3>PFT - Expense Tracker</h3>
-            <p>Personal · Expense categorization, analytics and local data persistence. Live on Indus App Store.</p>
-          </div>
-        </div>
-        <div class="box">
-          <div class="thumb"><i class="fab fa-npm"></i></div>
-          <div class="content">
-            <h3>rn-downloader</h3>
-            <p>Open-source React Native file downloading library published on npm.</p>
-            <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/rn-downloader">npm</a>
-          </div>
         </div>
       </div>
     </section>
@@ -800,27 +1016,27 @@
       </div>
       <div class="row">
         <div class="info-container">
-          <h1>get in touch</h1>
+          <h1>Get in Touch</h1>
           <p>Feel free to contact</p>
           <div class="box-container">
             <div class="box">
               <i class="fas fa-phone"></i>
               <div class="info">
-                <h3>number :</h3>
-                <p>+91 8600842880</p>
+                <h3>Phone :</h3>
+                <p><a href="tel:+918600842880">+91 8600842880</a></p>
               </div>
             </div>
             <div class="box">
               <i class="fas fa-envelope"></i>
               <div class="info">
-                <h3>email :</h3>
-                <p>chavanrohit413@gmail.com</p>
+                <h3>Email :</h3>
+                <p><a href="mailto:chavanrohit413@gmail.com">chavanrohit413@gmail.com</a></p>
               </div>
             </div>
             <div class="box">
               <i class="fas fa-map"></i>
               <div class="info">
-                <h3>address :</h3>
+                <h3>Address :</h3>
                 <p>Pune, India - 411016</p>
               </div>
             </div>
@@ -840,24 +1056,21 @@
             ></a>
           </div>
         </div>
-        <form action="">
-          <div class="inputBox">
-            <input type="text" placeholder="Your Name" />
-            <input type="number" placeholder="Your Number" />
+        <div class="cta">
+          <h3>Hiring for a React Native or Full-Stack role?</h3>
+          <p>Below are the fastest ways to reach me.</p>
+          <div class="cta-actions">
+            <a
+              href="mailto:chavanrohit413@gmail.com?subject=Opportunity%20for%20Rohitkumar%20Chavan"
+              class="btn"
+            >
+              Email Me <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+918600842880" class="btn btn-outline">
+              Call Me <i class="fas fa-phone"></i>
+            </a>
           </div>
-          <div class="inputBox">
-            <input type="email" placeholder="Your Email" />
-            <input type="text" placeholder="Your Subject" />
-          </div>
-          <textarea
-            name=""
-            placeholder="Your message"
-            id=""
-            cols="30"
-            rows="10"
-          ></textarea>
-          <input type="Submit" value="send message" class="btn" />
-        </form>
+        </div>
       </div>
     </section>
 
